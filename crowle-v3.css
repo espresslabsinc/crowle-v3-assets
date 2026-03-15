@@ -315,7 +315,61 @@ body { overscroll-behavior: none; }
 .acc_item.open .acc_body.w-dyn-list { display: block; }
 .acc_body .w-dyn-items { display: block; }
 .acc_body .w-dyn-item { width: 100%; }
+/* ── SERVICES ── */
+.section_services_intro { padding: 64px 40px 0; max-width: 760px; margin: 0 auto; text-align: center; }
+.section_services_intro p { font-family: 'Barlow', sans-serif; font-size: 16px; line-height: 1.8; color: #828383; }
 
+.toc_section { padding: 52px 40px 0; max-width: 760px; margin: 0 auto; }
+.toc_item { display: flex; align-items: baseline; gap: 20px; padding: 16px 0; border-bottom: 1px solid #E0E0E1; }
+.toc_item:first-child { border-top: 1px solid #E0E0E1; }
+.toc_num { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.14em; color: #45A972; flex-shrink: 0; width: 28px; }
+.toc_name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 18px; letter-spacing: 0.04em; text-transform: uppercase; color: #152C51; text-decoration: none; transition: color 0.2s; }
+.toc_name:hover { color: #45A972; }
+
+.scroll_prompt { text-align: center; padding: 40px 40px 0; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #828383; }
+
+.services_wrap { padding: 72px 40px 80px; max-width: 1100px; margin: 0 auto; }
+.service_block { padding: 72px 0; border-top: 1px solid #E0E0E1; }
+.service_block:first-child { border-top: none; padding-top: 0; }
+.service_header { display: grid; grid-template-columns: 100px 1fr 420px; gap: 32px; align-items: start; margin-bottom: 48px; }
+.service_num { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 96px; line-height: 1; color: #45A972; letter-spacing: -0.02em; padding-top: 4px; }
+.service_meta { padding-top: 12px; }
+.service_title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 32px; letter-spacing: 0.03em; text-transform: uppercase; color: #152C51; line-height: 1.1; margin-bottom: 20px; }
+.service_desc { font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 1.78; color: #828383; border-left: 3px solid #45A972; padding-left: 16px; max-width: 380px; }
+.service_img { position: relative; overflow: hidden; aspect-ratio: 16/10; background: #152C51; }
+.service_img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+.service_block:hover .service_img img { transform: scale(1.03); }
+
+.features_grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-left: 132px; }
+.features_label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #152C51; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #f6f6f4; }
+.features_list { list-style: none; display: flex; flex-direction: column; }
+.features_list li { font-family: 'Barlow', sans-serif; font-size: 13px; line-height: 1.6; color: #828383; padding: 10px 0; border-bottom: 1px solid #f6f6f4; display: flex; align-items: flex-start; gap: 10px; }
+.features_list li::before { content: ''; flex-shrink: 0; width: 5px; height: 5px; background: #45A972; border-radius: 50%; margin-top: 6px; }
+
+/* ── SERVICES RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .service_header { grid-template-columns: 80px 1fr; gap: 24px; }
+  .service_img { grid-column: 1 / -1; aspect-ratio: 16/9; }
+  .service_num { font-size: 72px; }
+  .features_grid { margin-left: 104px; }
+}
+@media (max-width: 991px) {
+  .section_services_intro { padding: 48px 24px 0; }
+  .toc_section { padding: 40px 24px 0; }
+  .scroll_prompt { padding: 32px 24px 0; }
+  .services_wrap { padding: 52px 24px 64px; }
+  .service_num { font-size: 64px; }
+  .features_grid { margin-left: 0; grid-template-columns: 1fr; }
+}
+@media (max-width: 479px) {
+  .section_services_intro { padding: 36px 20px 0; }
+  .toc_section { padding: 32px 20px 0; }
+  .services_wrap { padding: 40px 20px 52px; }
+  .service_header { grid-template-columns: 1fr; }
+  .service_num { font-size: 56px; }
+  .service_desc { max-width: 100%; }
+  .features_grid { grid-template-columns: 1fr; }
+}
 /* ── CONTACT ── */
 .section_contact { padding: 72px 40px 80px; }
 .contact_inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 340px; gap: 80px; align-items: start; }
