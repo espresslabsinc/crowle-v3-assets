@@ -378,7 +378,7 @@ body { overscroll-behavior: none; }
 .post_featured_title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 30px; letter-spacing: 0.03em; text-transform: uppercase; color: #ffffff; line-height: 1.15; margin-bottom: 16px; }
 .post_featured_excerpt { font-family: 'Barlow', sans-serif; font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.65); margin-bottom: 28px; flex: 1; }
 .post_featured_cta { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; display: inline-flex; align-items: center; gap: 8px; }
-
+a.post_featured_link { display: grid !important; }
 .post_featured_link { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0; min-height: 380px; width: 100%; text-decoration: none; background: #152C51; overflow: hidden; }
 .post_featured_link .post_featured_img { position: relative; overflow: hidden; min-height: 380px; }
 .post_featured_link .post_featured_img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; display: block; }
