@@ -91,7 +91,20 @@ body { overscroll-behavior: none; }
 .stat_word { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 60px; text-transform: uppercase; letter-spacing: 0.02em; color: #45A972; line-height: 1; }
 .stat_commitment { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 26px; text-transform: uppercase; color: rgba(255,255,255,0.88); }
 .stat_body { font-family: 'Barlow', sans-serif; font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; max-width: 220px; text-align: center; margin-top: 8px; }
+/* ── MATEENBAR ADVANTAGE ── */
+.section_advantage { background: #152C51; padding: 80px 40px; }
+.section_advantage_inner { max-width: 1120px; margin: 0 auto; }
+.advantage_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 40px; }
+.advantage_card { background: rgba(255,255,255,0.05); padding: 32px 28px; }
+.advantage_stat { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 28px; color: #45A972; margin-bottom: 12px; }
+.advantage_label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: #ffffff; margin-bottom: 10px; }
+.advantage_desc { font-family: 'Barlow', sans-serif; font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.55); }
 
+@media (max-width: 991px) {
+  .section_advantage { padding: 56px 24px; }
+  .advantage_grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 479px) { .section_advantage { padding: 44px 20px; } }
 /* ── SUPPLY CATEGORIES — CATEGORY BLOCKS ── */
 .cat_block { display: grid; grid-template-columns: 1fr 1fr; min-height: 520px; border-top: 1px solid #E0E0E1; }
 .cat_block_img { position: relative; overflow: hidden; background: #152C51; }
