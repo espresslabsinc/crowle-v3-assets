@@ -364,22 +364,15 @@ body { overscroll-behavior: none; }
 .posts_eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #45A972; margin-bottom: 12px; display: block; }
 .posts_title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: 0.02em; text-transform: uppercase; color: #152C51; line-height: 1; }
 .posts_count { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #828383; flex-shrink: 0; padding-bottom: 6px; }
-.post_featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 3px; text-decoration: none; background: #152C51; overflow: hidden; }
-.post_featured_link {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  min-height: 380px;
-  width: 100%;
-  text-decoration: none;
-}
+.post_featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 3px; background: #152C51; overflow: hidden; }
 .post_featured.w-dyn-list { display: grid !important; grid-template-columns: 1fr 1fr !important; }
 .post_featured .w-dyn-items { display: contents !important; }
 .post_featured .w-dyn-item { width: 100% !important; display: grid !important; grid-template-columns: 1fr 1fr !important; }
-.post_featured:hover .post_featured_img img { transform: scale(1.04); opacity: 0.45; }
-.post_featured:hover .post_featured_cta { color: #45A972; }
+.post_featured_link { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0; min-height: 380px; width: 100%; text-decoration: none; background: #152C51; overflow: hidden; }
+.post_featured_link:hover .post_featured_img img { transform: scale(1.04); opacity: 0.45; }
+.post_featured_link:hover .post_featured_cta { color: #45A972; }
 .post_featured_img { position: relative; overflow: hidden; min-height: 380px; }
-.post_featured_img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; transition: opacity 0.5s ease, transform 0.6s ease; display: block; }
+.post_featured_img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; transition: opacity 0.5s ease, transform 0.6s ease; display: block; }
 .post_featured_badge { position: absolute; top: 20px; left: 20px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #ffffff; background: #45A972; padding: 5px 12px; }
 .post_featured_body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; }
 .post_featured_meta { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 16px; }
@@ -402,6 +395,10 @@ body { overscroll-behavior: none; }
 .post_card:hover .post_card_title { color: #45A972; }
 .post_card_excerpt { font-family: 'Barlow', sans-serif; font-size: 13px; line-height: 1.65; color: #828383; }
 .post_card_tag { display: inline-block; margin-top: 14px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #45A972; border-bottom: 1.5px solid #45A972; padding-bottom: 1px; }
+.post_featured_link { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 0; min-height: 380px; width: 100%; text-decoration: none; background: #152C51; overflow: hidden; }
+.post_featured_link .post_featured_img { position: relative; overflow: hidden; min-height: 380px; }
+.post_featured_link .post_featured_img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.65; display: block; }
+.post_featured_link .post_featured_body { padding: 48px 44px; display: flex; flex-direction: column; justify-content: center; width: 100%; }
 .section_linkedin { background: #f6f6f4; border-top: 1px solid #E0E0E1; padding: 56px 40px; text-align: center; }
 .linkedin_title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #152C51; margin-bottom: 12px; }
 .linkedin_body { font-family: 'Barlow', sans-serif; font-size: 15px; line-height: 1.7; color: #828383; max-width: 520px; margin: 0 auto 24px; }
@@ -483,6 +480,7 @@ body { overscroll-behavior: none; }
   .post_featured { grid-template-columns: 1fr; }
   .post_featured.w-dyn-list { grid-template-columns: 1fr !important; }
   .post_featured .w-dyn-item { grid-template-columns: 1fr !important; }
+  .post_featured_link { grid-template-columns: 1fr !important; }
   .post_featured_img { min-height: 240px; }
   .post_featured_body { padding: 36px 28px; }
   .post_grid { grid-template-columns: 1fr 1fr; }
