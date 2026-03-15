@@ -365,6 +365,14 @@ body { overscroll-behavior: none; }
 .posts_title { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 38px; letter-spacing: 0.02em; text-transform: uppercase; color: #152C51; line-height: 1; }
 .posts_count { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #828383; flex-shrink: 0; padding-bottom: 6px; }
 .post_featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 3px; text-decoration: none; background: #152C51; overflow: hidden; }
+.post_featured_link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 380px;
+  width: 100%;
+  text-decoration: none;
+}
 .post_featured.w-dyn-list { display: grid !important; grid-template-columns: 1fr 1fr !important; }
 .post_featured .w-dyn-items { display: contents !important; }
 .post_featured .w-dyn-item { width: 100% !important; display: grid !important; grid-template-columns: 1fr 1fr !important; }
