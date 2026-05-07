@@ -1,7 +1,7 @@
 /* ============================================================
    CROWLE V3 — MAIN STYLESHEET
    Hosted on Webflow CDN via Assets panel
-   Last updated: March 2026 - Dan
+   Last updated: May 2026 - Dan
    ============================================================ */ 
 
 /* ── BASE ── */
@@ -570,12 +570,9 @@ a.post_featured_link { display: grid !important; }
   .section_industries { padding: 56px 24px; }
   .cat_grid_v2 { grid-template-columns: 1fr 1fr; }
   .cat_grid_v2.w-dyn-list { grid-template-columns: 1fr 1fr !important; }
-  .cat_grid_desc { max-height: 120px; opacity: 1; }
-  .cat_grid_cta { opacity: 1; transform: translateY(0); }
   .cat_grid_centered .cat_grid_card { width: calc(50% - 1px); }
   .industry_grid { grid-template-columns: repeat(3, 1fr); }
   .industry_grid.w-dyn-list { grid-template-columns: repeat(3, 1fr) !important; }
-  .industry_desc { max-height: 300px; opacity: 1; }
   .section_title { font-size: 30px; }
   .section_product_list { padding: 56px 24px; }
   .product_grid { grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -621,6 +618,65 @@ a.post_featured_link { display: grid !important; }
   .section_linkedin { padding: 44px 24px; }
   .footer_grid { grid-template-columns: 1fr 1fr; gap: 40px 28px; }
   .footer_brand { grid-column: 1 / -1; }
+
+  /* ── CARD CONTENT FIX (cat_grid_card + industry_card) ─────────
+     On mobile, the absolutely-positioned body was being clipped
+     by the card's fixed aspect-ratio. Restructure so the image
+     sits on top with a fixed height and the body flows naturally
+     below it on a solid navy background.
+     ─────────────────────────────────────────────────────────── */
+  .cat_grid_card,
+  .industry_card {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    height: auto;
+  }
+  .cat_grid_img {
+    position: relative;
+    height: 240px;
+    flex-shrink: 0;
+  }
+  .cat_grid_overlay {
+    bottom: auto;
+    height: 240px;
+  }
+  .cat_grid_body {
+    position: relative;
+    bottom: auto;
+    background: #152C51;
+    padding: 24px 22px 28px;
+  }
+  .cat_grid_desc {
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+  }
+  .cat_grid_cta {
+    opacity: 1;
+    transform: none;
+  }
+  .industry_img {
+    position: relative;
+    height: 200px;
+    flex-shrink: 0;
+  }
+  .industry_overlay {
+    bottom: auto;
+    height: 200px;
+  }
+  .industry_body {
+    position: relative;
+    bottom: auto;
+    background: #152C51;
+    padding: 22px 18px 26px;
+  }
+  .industry_desc {
+    max-height: none;
+    overflow: visible;
+    opacity: 1;
+  }
 }
 
 /* ══════════════════════════════════════
@@ -643,7 +699,6 @@ a.post_featured_link { display: grid !important; }
   .section_industries { padding: 44px 20px; }
   .cat_grid_v2 { grid-template-columns: 1fr; }
   .cat_grid_v2.w-dyn-list { grid-template-columns: 1fr !important; }
-  .cat_grid_card { aspect-ratio: 16/9; }
   .cat_grid_centered { flex-direction: column; }
   .cat_grid_centered .cat_grid_card { width: 100%; }
   .industry_grid { grid-template-columns: 1fr 1fr; }
@@ -688,4 +743,10 @@ a.post_featured_link { display: grid !important; }
   .section_linkedin { padding: 36px 20px; }
   .footer_grid { grid-template-columns: 1fr; gap: 32px; }
   .footer_brand { grid-column: 1; }
+
+  /* ── Card image heights tighter on small mobile ── */
+  .cat_grid_img,
+  .cat_grid_overlay { height: 200px; }
+  .industry_img,
+  .industry_overlay { height: 170px; }
 }
